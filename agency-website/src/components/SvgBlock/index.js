@@ -22,7 +22,7 @@ const SvgBlock = ({ svg }) => {
   //console.log(SvgIcon);
   return (
     <Rb id="svgBlock">
-      <img src={SvgIcon} alt="Services" />
+      <img src={SvgIcon} alt="NuestraHistoria" />
     </Rb>
   );
 };

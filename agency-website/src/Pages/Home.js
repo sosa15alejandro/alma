@@ -3,7 +3,7 @@
 //Import all the require sections here
 import HeroSection from "../Sections/Hero/index";
 import QuienesSomos from "../Sections/QuienesSomos/index";
-import Services from "../Sections/Services/index";
+import NuestraHistoria from "../Sections/NuestraHistoria/index";
 import Background from "../Sections/Background/index";
 import Testimonials from "../Sections/Testimonials/index";
 import Contact from "../Sections/Contact/index";
@@ -23,7 +23,7 @@ const Home = () => {
       <HeroSection />
       <QuienesSomos />
       <Background />
-      <Services />
+      <NuestraHistoria />
       <Testimonials />
       <Contact />
     </Container>
