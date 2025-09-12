@@ -33,8 +33,8 @@ const Logo = styled.a`
 `;
 
 const Nav = styled.nav`
-  width: 40rem;
-  max-width: 40rem;
+  width: 60rem;
+  max-width: 60rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -249,6 +249,12 @@ const Header = () => {
         <a href="#nuestrahistoria" onClick={(e) => scrollUp("nuestrahistoria", e)}>
           Nuestra Historia
         </a>
+        <a href="#nuestrosservicios" onClick={(e) => scrollUp("nuestrosservicios", e)}>
+          Nuestros Servicios
+        </a>
+        <a href="#eventosrealizados" onClick={(e) => scrollUp("eventosrealizados", e)}>
+          Eventos Realizados
+        </a>
         <a href="#contact" onClick={(e) => scrollUp("contact", e)}>
           <Button>Contact Us</Button>
         </a>
@@ -268,6 +274,12 @@ const Header = () => {
         </a>
         <a href="#nuestrahistoria" onClick={(e) => handleClick("nuestrahistoria", e)}>
           Nuestra Historia
+        </a>
+        <a href="#nuestrosservicios" onClick={(e) => handleClick("nuestrosservicios", e)}>
+          Nuestros Servicios
+        </a>
+        <a href="#eventosrealizados" onClick={(e) => handleClick("eventosrealizados", e)}>
+          Eventos Realizados
         </a>
         <a href="#contact" onClick={(e) => handleClick("contact", e)}>
           <Button>Contact Us</Button>

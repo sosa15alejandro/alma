@@ -127,7 +127,7 @@ const Row = styled.div`
 const Contact = () => {
   return (
     <ContactSection id="contact">
-      <Title>Get in touch</Title>
+      <Title>Alma Eventos</Title>
       {/* <Text>Lorem ipsum dolor sit amet, consectetur adipisicing.</Text> */}
       <Icons>
         <a href="https://www.facebook.com/">

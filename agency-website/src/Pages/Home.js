@@ -3,9 +3,10 @@
 //Import all the require sections here
 import HeroSection from "../Sections/Hero/index";
 import QuienesSomos from "../Sections/QuienesSomos/index";
-import NuestraHistoria from "../Sections/NuestraHistoria/index";
 import Background from "../Sections/Background/index";
-import Testimonials from "../Sections/Testimonials/index";
+import NuestraHistoria from "../Sections/NuestraHistoria/index";
+import NuestrosServicios from "../Sections/NuestrosServicios/index";
+import EventosRealizados from "../Sections/EventosRealizados/index";
 import Contact from "../Sections/Contact/index";
 import styled from "styled-components";
 
@@ -24,7 +25,8 @@ const Home = () => {
       <QuienesSomos />
       <Background />
       <NuestraHistoria />
-      <Testimonials />
+      <NuestrosServicios />
+      <EventosRealizados />
       <Contact />
     </Container>
   );
