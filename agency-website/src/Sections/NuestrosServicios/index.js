@@ -6,7 +6,7 @@ import nuestrosservicios3 from "../../assets/nuestrosservicios3.png";
 import nuestrosservicios4 from "../../assets/nuestrosservicios4.png";
 import nuestrosservicios5 from "../../assets/nuestrosservicios5.png";
 import nuestrosservicios6 from "../../assets/nuestrosservicios6.png";
-import party from "../../assets/party.png";
+import fondoVideo from "../../assets/videoevento2.mp4";
 import party2 from "../../assets/party2.png";
 
 const move = keyframes`
@@ -22,13 +22,30 @@ const NuestrosServiciosSection = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  min-height: 100vh; /* ocupa toda la altura de la pantalla */
 `;
+
+const VideoNuestrosServicios = styled.video`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
+  filter: brightness(0.7) contrast(1.1); /* mejora el contraste y lectura */
+  transform: scale(1.02); /* evita bordes vacíos y mejora suavidad */
+`;
+
 const Waves = styled.img`
   width: 100%;
   height: auto;
   position: absolute;
   top: -1rem;
 `;
+
 const Party2 = styled.div`
   position: absolute;
   bottom: -1rem;
@@ -58,6 +75,9 @@ const Main = styled.div`
 const Title = styled.h1`
   font-size: 2rem;
   display: inline-block;
+  color: white;
+  text-shadow: 2px 2px 4px black; /* sombra negra detrás del texto */
+
 `;
 
 const CurvedLine = styled.div`
@@ -90,21 +110,15 @@ const Rocket = styled.div`
   }
 `;
 
-const Party = styled.div`
-  width: 100%;
-  position: absolute;
-  right: 0;
-  bottom: 100%;
 
-  @media only Screen and (max-width: 40em) {
-    display: none;
-  }
-`;
 const Text = styled.h4`
   font-size: calc(0.5rem + 1vw);
   line-height: 1.5;
-  color: var(--nav2);
+  color: white;
+  text-shadow: 2px 2px 4px black; /* sombra negra detrás del texto */
+
 `;
+
 const Circle = styled.span`
   display: inline-block;
   width: 1rem;
@@ -125,6 +139,10 @@ const NuestrosServiciosText = styled.div`
 const NuestrosServicios = () => {
   return (
     <NuestrosServiciosSection id="nuestrosservicios">
+      <VideoNuestrosServicios autoPlay loop muted>
+        <source src={fondoVideo} type="video/mp4" />
+        Tu navegador no soporta videos HTML5.
+      </VideoNuestrosServicios>
       {/* <Waves src={wave} alt="" /> */}
       <Party2>
         <img src={party2} alt="" />
@@ -160,7 +178,7 @@ const NuestrosServicios = () => {
           </Rocket>
           <NuestrosServiciosText>
             <Text>
-              Eventos Corporativos           
+              Eventos Corporativos
             </Text>
           </NuestrosServiciosText>
         </Content>
@@ -180,7 +198,7 @@ const NuestrosServicios = () => {
           </Rocket>
           <NuestrosServiciosText>
             <Text>
-              Cobertura Audiovisual         
+              Cobertura Audiovisual
             </Text>
           </NuestrosServiciosText>
         </Content>
@@ -190,7 +208,7 @@ const NuestrosServicios = () => {
           </Rocket>
           <NuestrosServiciosText>
             <Text>
-              Influencers            
+              Influencers
             </Text>
           </NuestrosServiciosText>
         </Content>
