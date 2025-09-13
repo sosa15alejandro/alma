@@ -66,7 +66,13 @@ const VideoContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40%; /* un poco más ancho que 30% para que luzca mejor */
+  width: 60%; /* escritorio */
+
+  @media only screen and (max-width: 48em) {
+    width: 100%;
+    max-width: 300px; /* el video no pasa de 300px en mobile */
+    padding-bottom: 1rem;
+  }
 
   @media only screen and (max-width: 48em) {
     width: 90%; /* en mobile, que ocupe casi todo el ancho */
@@ -98,6 +104,15 @@ const Text = styled.h4`
   line-height: 1.5;
   color: var(--nav2);
 `;
+
+const NuestraHistoriaText = styled.div`
+  width: 100%;
+  position: relative;
+  @media only Screen and (max-width: 40em) {
+    width: 100%;
+  }
+`;
+
 const Circle = styled.span`
   display: inline-block;
   width: 1rem;
@@ -107,18 +122,11 @@ const Circle = styled.span`
   margin-right: 0.5rem;
   margin-top: 1rem;
 `;
-const NuestraHistoriaText = styled.div`
-  width: 100%;
-  position: relative;
-  @media only Screen and (max-width: 40em) {
-    width: 100%;
-  }
-`;
 
 const NuestraHistoria = () => {
   return (
     <NuestraHistoriaSection id="nuestrahistoria">
-      <Waves src={wave} alt="" />
+      {/* <Waves src={wave} alt="" /> */}
       <Party2>
         <img src={party2} alt="" />
       </Party2>
@@ -164,7 +172,6 @@ const NuestraHistoria = () => {
               <Circle style={{ backgroundColor: "var(--black)" }} />
             </div>
             <br></br>
-
           </NuestraHistoriaText>
         </Content>
       </Main>

@@ -120,7 +120,7 @@ const QuienesSomosText = styled.div`
 const QuienesSomos = () => {
   return (
     <QuienesSomosSection id="quienessomos">
-      <Waves src={wave} alt="" />
+      {/* <Waves src={wave} alt="" /> */}
       <Party2>
         <img src={party2} alt="" />
       </Party2>

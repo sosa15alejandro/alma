@@ -109,7 +109,7 @@ const EventosRealizadosText = styled.div`
 const EventosRealizados = () => {
   return (
     <EventosRealizadosSection id="eventosrealizados">
-      <Waves src={wave} alt="" />
+      {/* <Waves src={wave} alt="" /> */}
       <Party2>
         <img src={party2} alt="" />
       </Party2>

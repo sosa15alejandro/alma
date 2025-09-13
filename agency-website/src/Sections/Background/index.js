@@ -120,7 +120,7 @@ const BackgroundText = styled.div`
 const Background = () => {
   return (
     <BackgroundSection id="background">
-      <Waves src={wave} alt="" />
+      {/* <Waves src={wave} alt="" /> */}
       <Party2>
         <img src={party2} alt="" />
       </Party2>

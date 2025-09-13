@@ -125,7 +125,7 @@ const NuestrosServiciosText = styled.div`
 const NuestrosServicios = () => {
   return (
     <NuestrosServiciosSection id="nuestrosservicios">
-      <Waves src={wave} alt="" />
+      {/* <Waves src={wave} alt="" /> */}
       <Party2>
         <img src={party2} alt="" />
       </Party2>
