@@ -1,23 +1,8 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import wave from "../../assets/waves.svg";
 import nuestrahistoria from "../../assets/nuestrahistoria.mp4";
-import party from "../../assets/party.png";
 import party2 from "../../assets/party2.png";
 
-const move = keyframes`
-0% { transform: translateY(-5px)         }
-    50% { transform: translateY(3px) translateX(10px)        }
-    100% { transform: translateY(-5px)         }
-`;
-
-const NuestraHistoriaSection = styled.section`
-  width: 100vw;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
 const Waves = styled.img`
   width: 100%;
   height: auto;
@@ -65,28 +50,51 @@ const CurvedLine = styled.div`
 
 const Content = styled.div`
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  @media only Screen and (max-width: 40em) {
-    flex-direction: column;
+  gap: 2rem; /* espacio entre video y texto */
+
+  @media only screen and (max-width: 48em) {
+    flex-direction: column; /* en pantallas chicas, uno debajo del otro */
+    justify-content: center;
+    align-items: center;
   }
 `;
 
-const Video = styled.div`
+const VideoContainer = styled.div`
   display: flex;
   justify-content: center;
-  align-content: center;
-  width: 40%;
-  padding-bottom: 5rem;
-  animation: ${move} 2.5s ease infinite;
-  @media only Screen and (max-width: 40em) {
-    width: 50vw;
-    padding-bottom: 0;
+  align-items: center;
+  width: 40%; /* un poco más ancho que 30% para que luzca mejor */
+
+  @media only screen and (max-width: 48em) {
+    width: 90%; /* en mobile, que ocupe casi todo el ancho */
+    padding-bottom: 1rem;
   }
+
+  video {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+  }
+`;
+
+const NuestraHistoriaSection = styled.section`
+  width: 100vw;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.1rem 0.1rem; /* algo de espacio interno */
 `;
 
 const Text = styled.h4`
-  font-size: calc(0.2rem + 1vw);
+  font-size: calc(0.7rem + 1vw);
   line-height: 1.5;
   color: var(--nav2);
 `;
@@ -100,7 +108,7 @@ const Circle = styled.span`
   margin-top: 1rem;
 `;
 const NuestraHistoriaText = styled.div`
-  width: 50%;
+  width: 100%;
   position: relative;
   @media only Screen and (max-width: 40em) {
     width: 100%;
@@ -120,17 +128,24 @@ const NuestraHistoria = () => {
           <CurvedLine />
         </div>
         <Content>
-          <Video
-            width="600"
-            height="600"
-            controls   // muestra los controles (play, pausa, volumen)
-            autoPlay   // empieza automáticamente
-            loop       // vuelve a reproducir en bucle
-            muted      // empieza sin sonido (recomendado si usás autoPlay)
-          >
-            <source src={nuestrahistoria} type="video/mp4" />
-            Tu navegador no soporta videos HTML5.
-          </Video>
+          <VideoContainer>
+            <video
+              controls
+              autoPlay
+              loop
+              muted
+              style={{
+                  aspectRatio: "16/9",
+                  objectFit: "cover",
+                  width: "100%",
+                  height: "auto"
+                }}              
+            >
+              <source src={nuestrahistoria} type="video/mp4" />
+              Tu navegador no soporta videos HTML5.
+            </video>
+          </VideoContainer>
+
           <NuestraHistoriaText>
             <Text>
               Somos profesionales del marketing y venimos del mundo corporativo y de multinacionales reconocidas.
@@ -154,6 +169,7 @@ const NuestraHistoria = () => {
         </Content>
       </Main>
     </NuestraHistoriaSection>
+    
   );
 };
 
