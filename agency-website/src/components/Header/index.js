@@ -257,7 +257,7 @@ const Header = () => {
           Eventos Realizados
         </a>
         <a href="#contact" onClick={(e) => scrollUp("contact", e)}>
-          <Button>Contact Us</Button>
+          <Button>Contactanos!</Button>
         </a>
       </Nav>
       <HamburgerBtn clicked={+click} onClick={() => setClick(!click)}>
@@ -283,7 +283,7 @@ const Header = () => {
           Eventos Realizados
         </a>
         <a href="#contact" onClick={(e) => handleClick("contact", e)}>
-          <Button>Contact Us</Button>
+          <Button>Contactanos!</Button>
         </a>
       </MobileMenu>
     </Headers>

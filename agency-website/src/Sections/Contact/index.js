@@ -146,11 +146,11 @@ const Contact = () => {
       </Icons>
       <Form>
         <Row>
-          <input name="name" type="text" placeholder="your name" />
+          <input name="name" type="text" placeholder="Ingrese su nombre" />
           <input
             name="email"
             type="email"
-            placeholder="enter working email id"
+            placeholder="Ingrese su email"
           />
         </Row>
         <textarea
@@ -158,7 +158,7 @@ const Contact = () => {
           id=""
           cols="30"
           rows="2"
-          placeholder="your message"
+          placeholder="Dejanos tu mensaje"
         ></textarea>
         <div style={{ margin: "0 auto" }}>
           <button
@@ -166,7 +166,7 @@ const Contact = () => {
               e.preventDefault();
             }}
           >
-            Submit
+            Enviar
           </button>
         </div>
       </Form>
