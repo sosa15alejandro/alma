@@ -139,20 +139,20 @@ const QuienesSomos = () => {
             </Party>
 
             <Text>
-              ✨ Somos una agencia de producción de eventos y
+              Somos una agencia de producción de eventos y
               activaciones fundada por un grupo de profesionales
               con +20 años de experiencia real en marketing y
               management en empresas líderes.
             </Text>
             <Text>
-              💡 Nuestra promesa 👉 Creamos experiencias
+              Nuestra promesa: creamos experiencias
               integrales con diseño emocional, estrategia de
               marca, foco en la sustentabilidad y una ejecución
               premium de principio a fin.
             </Text>
             <Text>
-              🌟 Nuestro propósito 👉 Transformamos eventos
-              en encuentros con sentido 💫
+              Nuestro propósito: Transformamos eventos
+              en encuentros con sentido
             </Text>
             <div>
               <Circle style={{ backgroundColor: "var(--purple)" }} />
