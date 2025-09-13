@@ -11,7 +11,7 @@ import party2 from "../../assets/party2.png";
 
 const move = keyframes`
 0% { transform: translateY(-5px)         }
-    50% { transform: translateY(10px) translateX(10px)        }
+    50% { transform: translateY(3px) translateX(10px)        }
     100% { transform: translateY(-5px)         }
 `;
 

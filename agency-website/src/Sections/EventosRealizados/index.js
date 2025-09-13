@@ -5,7 +5,7 @@ import party2 from "../../assets/party2.png";
 
 const move = keyframes`
 0% { transform: translateY(-5px)         }
-    50% { transform: translateY(10px) translateX(10px)        }
+    50% { transform: translateY(3px) translateX(10px)        }
     100% { transform: translateY(-5px)         }
 `;
 
@@ -84,16 +84,6 @@ const Rocket = styled.div`
   }
 `;
 
-const Party = styled.div`
-  width: 100%;
-  position: absolute;
-  right: 0;
-  bottom: 100%;
-
-  @media only Screen and (max-width: 40em) {
-    display: none;
-  }
-`;
 const Text = styled.h4`
   font-size: calc(0.5rem + 1vw);
   line-height: 1.5;
