@@ -9,7 +9,7 @@ const Headers = styled.header`
   justify-content: space-between;
   align-items: center;
   padding: 1rem 5rem;
-  background-color: var(--nav);
+  background-color: black;
   color: var(--white);
   position: relative;
   z-index: 500;
@@ -84,7 +84,7 @@ const Button = styled.button`
     transform: scale(0.9);
   }
   @media only Screen and (max-width: 40em) {
-    font-size: 1.2rem;
+    font-size: 1rem;
     &:hover {
       transform: none;
     }
@@ -103,6 +103,7 @@ const HamburgerBtn = styled.button`
   width: 2rem;
   height: 2px;
   margin-top: 0rem;
+  margin-left: 0.8rem;
   transition: all 0.3s;
   cursor: pointer;
   &::before,
@@ -152,8 +153,8 @@ const MobileMenu = styled.nav`
   a {
     color: var(--white);
     font-weight: 600;
-    font-size: 1.5rem;
-    margin: 1.5rem;
+    font-size: 0.8rem;
+    margin: 1rem;
     cursor: pointer;
   }
 `;
